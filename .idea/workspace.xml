@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fe89fe9-39fa-40ab-866c-2bbc950d3ad2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/assignment5-main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assignment5-main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tic_tac_toe.py" beforeDir="false" afterPath="$PROJECT_DIR$/tic_tac_toe.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tic_tac_toe_sol.py" beforeDir="false" afterPath="$PROJECT_DIR$/tic_tac_toe_sol.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +29,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
@@ -59,26 +62,4 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="WindowStateProjectService">
-    <state x="216" y="101" width="1071" height="724" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605036755910">
-      <screen x="0" y="23" width="1440" height="833" />
-    </state>
-    <state x="216" y="101" width="1071" height="724" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.833@0.23.1440.833" timestamp="1605036755910" />
-    <state width="1318" height="215" key="GridCell.Tab.0.bottom" timestamp="1605036780196">
-      <screen x="0" y="23" width="1440" height="833" />
-    </state>
-    <state width="1318" height="215" key="GridCell.Tab.0.bottom/0.23.1440.833@0.23.1440.833" timestamp="1605036780196" />
-    <state width="1318" height="215" key="GridCell.Tab.0.center" timestamp="1605036780195">
-      <screen x="0" y="23" width="1440" height="833" />
-    </state>
-    <state width="1318" height="215" key="GridCell.Tab.0.center/0.23.1440.833@0.23.1440.833" timestamp="1605036780195" />
-    <state width="1318" height="215" key="GridCell.Tab.0.left" timestamp="1605036780194">
-      <screen x="0" y="23" width="1440" height="833" />
-    </state>
-    <state width="1318" height="215" key="GridCell.Tab.0.left/0.23.1440.833@0.23.1440.833" timestamp="1605036780194" />
-    <state width="1318" height="215" key="GridCell.Tab.0.right" timestamp="1605036780195">
-      <screen x="0" y="23" width="1440" height="833" />
-    </state>
-    <state width="1318" height="215" key="GridCell.Tab.0.right/0.23.1440.833@0.23.1440.833" timestamp="1605036780195" />
-  </component>
 </project>
