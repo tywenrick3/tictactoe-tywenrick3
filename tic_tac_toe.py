@@ -100,11 +100,11 @@ def get_position_choice(board, player_mark):
             if col_choice.isdigit():
                 if int(col_choice) in choices:
                     outputs = (int(row_choice), int(col_choice))
-                    if board[outputs] == ' ':
+                    if board.get(outputs) == ' ':
                         restart += 1
+                        break
                     else:
                         break
-        break
 
     return outputs
 
