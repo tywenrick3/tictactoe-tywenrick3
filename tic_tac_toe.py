@@ -123,6 +123,28 @@ def update_board(board, player_mark, position):
     board[position] = player_mark
 
 
+def display_outcome(round):
+    """Displays an outcome message for a completed Tic-tac-toe game.
+
+    :param round: the final value of the round variable for the game
+    :return: None
+
+    >>> round = MAX_ROUNDS
+    >>> display_outcome(round)
+    It's a draw!
+    <BLANKLINE>
+    >>> round = 6
+    >>> display_outcome(round)
+    X wins!
+    <BLANKLINE>
+    >>> round = 5
+    >>> display_outcome(round)
+    O wins!
+    <BLANKLINE>
+    """
+    pass
+
+
 def main():
 
     ########## DO NOT EDIT DICTIONARY INITIALIZATION BELOW #########
@@ -138,11 +160,13 @@ def main():
     ########## DO NOT EDIT DICTIONARY INITIALIZATION ABOVE #########
     
     # call play_tic_tac_toe() with board as argument and remove pass below
+
     board = {(0, 0): ' ', (0, 1): ' ', (0, 2): ' ', (1, 0): ' ', (1, 1): 'X', (1, 2): ' ', (2, 0): ' ', (2, 1): ' ', (2, 2): 'O'}
+    print(board)
     player_mark = 'X'
     position = get_position_choice(board, player_mark)
     update_board(board, player_mark, position)
-    display_board(board)
+    print(board)
 
 
 if __name__ == '__main__':
