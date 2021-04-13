@@ -106,8 +106,21 @@ def get_position_choice(board, player_mark):
                     else:
                         print()
                         break
+
     print()
     return outputs
+
+
+def update_board(board, player_mark, position):
+    """Updates the value at the key represented by position
+    in board dictionary to player_mark.
+
+    :param board: a dict of (row, col) tuple keys and string values
+    :param player_mark: 'X' or 'O' depending on round
+    :param position: (row, col) tuple representing position
+    :return: None
+    """
+    board[position] = player_mark
 
 
 def main():
@@ -127,7 +140,9 @@ def main():
     # call play_tic_tac_toe() with board as argument and remove pass below
     board = {(0, 0): ' ', (0, 1): ' ', (0, 2): ' ', (1, 0): ' ', (1, 1): 'X', (1, 2): ' ', (2, 0): ' ', (2, 1): ' ', (2, 2): 'O'}
     player_mark = 'X'
-    print(get_position_choice(board, player_mark))
+    position = get_position_choice(board, player_mark)
+    update_board(board, player_mark, position)
+    display_board(board)
 
 
 if __name__ == '__main__':
