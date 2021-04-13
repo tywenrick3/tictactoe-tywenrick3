@@ -104,6 +104,7 @@ def get_position_choice(board, player_mark):
                         restart += 1
                         break
                     else:
+                        print()
                         break
 
     return outputs
@@ -124,8 +125,8 @@ def main():
     ########## DO NOT EDIT DICTIONARY INITIALIZATION ABOVE #########
     
     # call play_tic_tac_toe() with board as argument and remove pass below
-    board = {(0, 0): 'X', (0, 1): ' ', (0, 2): ' ', (1, 0): 'O', (1, 1): ' ', (1, 2): 'O', (2, 0): 'X', (2, 1): ' ', (2, 2): ' '}
-    player_mark = 'O'
+    board = {(0, 0): ' ', (0, 1): ' ', (0, 2): ' ', (1, 0): ' ', (1, 1): 'X', (1, 2): ' ', (2, 0): ' ', (2, 1): ' ', (2, 2): 'O'}
+    player_mark = 'X'
     print(get_position_choice(board, player_mark))
 
 
