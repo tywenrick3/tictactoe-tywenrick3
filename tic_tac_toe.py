@@ -106,7 +106,7 @@ def get_position_choice(board, player_mark):
                     else:
                         print()
                         break
-
+    print()
     return outputs
 
 
