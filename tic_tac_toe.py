@@ -187,6 +187,56 @@ def check_positions(pos1_value, pos2_value, pos3_value):
         return False
 
 
+def is_game_complete(board):
+    """Determines whether or not a winning configuration has been achieved in the game
+    represented by the board. Returns True when a winning configuration is detected and
+    False when no winning configuration exists on the board.
+
+    :param board: a dict of (row, col) tuple keys and string values
+    :return: True when a winning configuration is detected, False otherwise
+
+    >>> board = {(0, 0): ' ', (0, 1): ' ', (0, 2): ' ', (1, 0): ' ', (1, 1): 'X', (1, 2): ' ', (2, 0): ' ', (2, 1): ' ', (2, 2): ' '}
+    >>> is_game_complete(board)
+    False
+    >>> board = {(0, 0): 'X', (0, 1): 'X', (0, 2): 'O', (1, 0): 'O', (1, 1): 'O', (1, 2): 'X', (2, 0): 'X', (2, 1): 'X', (2, 2): 'O'}
+    >>> is_game_complete(board)
+    False
+    >>> board = {(0, 0): ' ', (0, 1): 'O', (0, 2): ' ', (1, 0): ' ', (1, 1): 'O', (1, 2): ' ', (2, 0): 'X', (2, 1): 'X', (2, 2): 'X'}
+    >>> is_game_complete(board)
+    True
+    >>> board = {(0, 0): 'O', (0, 1): ' ', (0, 2): 'X', (1, 0): 'X', (1, 1): 'O', (1, 2): 'X', (2, 0): ' ', (2, 1): ' ', (2, 2): 'O'}
+    >>> is_game_complete(board)
+    True
+    """
+
+    #diagonal
+    if (board[(0,0)] == "X" and board[(1,1)] == "X" and board[(2,2)] == "X") or (board[(0,0)] == "O" and board[(1,1)] == "O" and board[(2,2)] == "O"):
+        return True
+    #diagonal
+    elif (board[(0,2)] == "X" and board[(1,1)] == "X" and board[(2,0)] == "X") or (board[(0,2)] == "O" and board[(1,1)] == "O" and board[(2,0)] == "O"):
+        return True
+    #vertical
+    elif (board[(0,0)] == "X" and board[(1,0)] == "X" and board[(2,0)] == "X") or (board[(0,0)] == "O" and board[(1,0)] == "O" and board[(2,0)] == "O"):
+        return True
+    #vertical
+    elif (board[(0,1)] == "X" and board[(1,1)] == "X" and board[(2,1)] == "X") or (board[(0,1)] == "O" and board[(1,1)] == "O" and board[(2,1)] == "O"):
+        return True
+    #vertical
+    elif (board[(0,2)] == "X" and board[(1,2)] == "X" and board[(2,2)] == "X") or (board[(0,2)] == "O" and board[(1,2)] == "O" and board[(2,2)] == "O"):
+        return True
+    #horizontal
+    elif (board[(0,0)] == "X" and board[(0,1)] == "X" and board[(0,2)] == "X") or (board[(0,0)] == "O" and board[(0,1)] == "O" and board[(0,2)] == "O"):
+        return True
+    #horizontal
+    elif (board[(1,0)] == "X" and board[(1,1)] == "X" and board[(1,2)] == "X") or (board[(1,0)] == "O" and board[(1,1)] == "O" and board[(1,2)] == "O"):
+        return True
+    #horizontal
+    elif (board[(2,0)] == "X" and board[(2,1)] == "X" and board[(2,2)] == "X") or (board[(2,0)] == "O" and board[(2,1)] == "O" and board[(2,2)] == "O"):
+        return True
+    else:
+        return False
+
+
 def main():
 
     ########## DO NOT EDIT DICTIONARY INITIALIZATION BELOW #########
@@ -203,12 +253,13 @@ def main():
     
     # call play_tic_tac_toe() with board as argument and remove pass below
 
-    board = {(0, 0): ' ', (0, 1): ' ', (0, 2): ' ', (1, 0): ' ', (1, 1): 'X', (1, 2): ' ', (2, 0): ' ', (2, 1): ' ', (2, 2): 'O'}
+    board = {(0, 0): 'X', (0, 1): ' ', (0, 2): ' ', (1, 0): ' ', (1, 1): 'X', (1, 2): ' ', (2, 0): ' ', (2, 1): ' ', (2, 2): 'X'}
 
     print(board)
     player_mark = 'X'
     position = get_position_choice(board, player_mark)
     update_board(board, player_mark, position)
+    is_game_complete(board)
     print(board)
 
 
