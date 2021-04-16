@@ -142,7 +142,15 @@ def display_outcome(round):
     O wins!
     <BLANKLINE>
     """
-    pass
+    if round == MAX_ROUNDS:
+        print("It's a draw!")
+        print()
+    elif round % 2 == 0:
+        print("X wins!")
+        print()
+    else:
+        print("O wins!")
+        print()
 
 
 def main():
