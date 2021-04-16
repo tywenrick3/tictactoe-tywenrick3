@@ -153,6 +153,40 @@ def display_outcome(round):
         print()
 
 
+def check_positions(pos1_value, pos2_value, pos3_value):
+    """Returns True when all parameters have a value of 'X' or
+    all parameters have a value of 'O'. Returns False for all
+    other value combinations.
+
+    :param pos1_value: the first of 3 consecutive board position values
+    :param pos2_value: the second of 3 consecutive board position values
+    :param pos3_value: the third of 3 consecutive board position values
+    :return: True when all 3 values are 'X' or when all 3 values are 'O', False otherwise
+
+    >>> (pos_val1, pos_va2, pos_val3)  = ('X', 'X', 'X')
+    >>> check_positions(pos_val1, pos_va2, pos_val3)
+    True
+    >>> (pos_val1, pos_val2, pos_val3)  = ('O', 'O', 'O')
+    >>> check_positions(pos_val1, pos_val2, pos_val3)
+    True
+    >>> (pos_val1, pos_val2, pos_val3)  = (' ', ' ', ' ')
+    >>> check_positions(pos_val1, pos_val2, pos_val3)
+    False
+    >>> (pos_val1, pos_val2, pos_val3)  = ('O', 'X', 'O')
+    >>> check_positions(pos_val1, pos_val2, pos_val3)
+    False
+    >>> (pos_val1, pos_val2, pos_val3)  = ('X', 'X', ' ')
+    >>> check_positions(pos_val1, pos_val2, pos_val3)
+    False
+    """
+    if pos1_value == "X" and pos2_value == "X" and pos3_value == "X":
+        return True
+    elif pos1_value == "O" and pos2_value == "O" and pos3_value == "O":
+        return True
+    else:
+        return False
+
+
 def main():
 
     ########## DO NOT EDIT DICTIONARY INITIALIZATION BELOW #########
@@ -170,6 +204,7 @@ def main():
     # call play_tic_tac_toe() with board as argument and remove pass below
 
     board = {(0, 0): ' ', (0, 1): ' ', (0, 2): ' ', (1, 0): ' ', (1, 1): 'X', (1, 2): ' ', (2, 0): ' ', (2, 1): ' ', (2, 2): 'O'}
+
     print(board)
     player_mark = 'X'
     position = get_position_choice(board, player_mark)
