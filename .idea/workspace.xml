@@ -76,6 +76,7 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="display_outcome added" />
     <MESSAGE value="check_positions added" />
-    <option name="LAST_COMMIT_MESSAGE" value="check_positions added" />
+    <MESSAGE value="is_game_complete added" />
+    <option name="LAST_COMMIT_MESSAGE" value="is_game_complete added" />
   </component>
 </project>

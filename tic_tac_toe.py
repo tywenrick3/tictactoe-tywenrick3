@@ -209,32 +209,69 @@ def is_game_complete(board):
     True
     """
 
-    #diagonal
+    #checks 8 possible winning gameboards
+
+    #diagonal 1
     if (board[(0,0)] == "X" and board[(1,1)] == "X" and board[(2,2)] == "X") or (board[(0,0)] == "O" and board[(1,1)] == "O" and board[(2,2)] == "O"):
         return True
-    #diagonal
+    #diagonal 2
     elif (board[(0,2)] == "X" and board[(1,1)] == "X" and board[(2,0)] == "X") or (board[(0,2)] == "O" and board[(1,1)] == "O" and board[(2,0)] == "O"):
         return True
-    #vertical
+    #vertical 1
     elif (board[(0,0)] == "X" and board[(1,0)] == "X" and board[(2,0)] == "X") or (board[(0,0)] == "O" and board[(1,0)] == "O" and board[(2,0)] == "O"):
         return True
-    #vertical
+    #vertical 2
     elif (board[(0,1)] == "X" and board[(1,1)] == "X" and board[(2,1)] == "X") or (board[(0,1)] == "O" and board[(1,1)] == "O" and board[(2,1)] == "O"):
         return True
-    #vertical
+    #vertical 3
     elif (board[(0,2)] == "X" and board[(1,2)] == "X" and board[(2,2)] == "X") or (board[(0,2)] == "O" and board[(1,2)] == "O" and board[(2,2)] == "O"):
         return True
-    #horizontal
+    #horizontal 1
     elif (board[(0,0)] == "X" and board[(0,1)] == "X" and board[(0,2)] == "X") or (board[(0,0)] == "O" and board[(0,1)] == "O" and board[(0,2)] == "O"):
         return True
-    #horizontal
+    #horizontal 2
     elif (board[(1,0)] == "X" and board[(1,1)] == "X" and board[(1,2)] == "X") or (board[(1,0)] == "O" and board[(1,1)] == "O" and board[(1,2)] == "O"):
         return True
-    #horizontal
+    #horizontal 3
     elif (board[(2,0)] == "X" and board[(2,1)] == "X" and board[(2,2)] == "X") or (board[(2,0)] == "O" and board[(2,1)] == "O" and board[(2,2)] == "O"):
         return True
     else:
         return False
+
+
+def play_tic_tac_toe(board):
+    """Controls Tic-tac-toe games. This includes prompting player's for
+    position choices, checking for winning game configurations, and outputting
+    the outcome of a game.
+
+    :param board: a dict of (row, col) tuple keys and string values
+    :return: None
+    """
+    round = 0
+    while round < MAX_ROUNDS:
+        if round % 2 == 0:
+            if not is_game_complete(board):
+                display_board(board)
+                player_mark = 'X'
+                position = get_position_choice(board, player_mark)
+                update_board(board, player_mark, position)
+            else:
+                print("O wins!")
+                break
+        else:
+            if not is_game_complete(board):
+                display_board(board)
+                player_mark = 'O'
+                position = get_position_choice(board, player_mark)
+                update_board(board, player_mark, position)
+            else:
+                print("X wins!")
+                break
+
+        round += 1
+
+    if not is_game_complete(board):
+        print("It's a draw!")
 
 
 def main():
@@ -252,15 +289,7 @@ def main():
     ########## DO NOT EDIT DICTIONARY INITIALIZATION ABOVE #########
     
     # call play_tic_tac_toe() with board as argument and remove pass below
-
-    board = {(0, 0): 'X', (0, 1): ' ', (0, 2): ' ', (1, 0): ' ', (1, 1): 'X', (1, 2): ' ', (2, 0): ' ', (2, 1): ' ', (2, 2): 'X'}
-
-    print(board)
-    player_mark = 'X'
-    position = get_position_choice(board, player_mark)
-    update_board(board, player_mark, position)
-    is_game_complete(board)
-    print(board)
+    play_tic_tac_toe(board)
 
 
 if __name__ == '__main__':
