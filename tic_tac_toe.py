@@ -257,6 +257,7 @@ def play_tic_tac_toe(board):
                 update_board(board, player_mark, position)
             else:
                 print("O wins!")
+                print()
                 break
         else:
             if not is_game_complete(board):
@@ -266,6 +267,7 @@ def play_tic_tac_toe(board):
                 update_board(board, player_mark, position)
             else:
                 print("X wins!")
+                print()
                 break
 
         round += 1
