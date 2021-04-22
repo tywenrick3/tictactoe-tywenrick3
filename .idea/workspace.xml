@@ -77,6 +77,7 @@
     <MESSAGE value="is_game_complete updated" />
     <MESSAGE value="play_tic_tac_toe added" />
     <MESSAGE value="is_game_complete() updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="is_game_complete() updated" />
+    <MESSAGE value="play_tic_tac_toe() updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="play_tic_tac_toe() updated" />
   </component>
 </project>
