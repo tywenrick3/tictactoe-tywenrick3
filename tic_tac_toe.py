@@ -288,7 +288,7 @@ def play_tic_tac_toe(board):
     :return: None
     """
     round = 0
-    while round < MAX_ROUNDS:
+    while round <= MAX_ROUNDS:
         if round % 2 == 0:
             if not is_game_complete(board):
                 display_board(board)
