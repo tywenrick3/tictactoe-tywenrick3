@@ -314,12 +314,12 @@ def play_tic_tac_toe(board):
 
         round += 1
 
-    if is_game_complete(board):
+    if is_game_complete(board) and round % 2 == 0:
         display_board(board)
         print("X wins!")
         print()
 
-    if not is_game_complete(board):
+    else:
         display_board(board)
         print("It's a draw!")
         print()
