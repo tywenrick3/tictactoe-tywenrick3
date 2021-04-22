@@ -35,6 +35,7 @@ def display_board(board):
             print("    --+-+--")
     print()
 
+
 ####### DO NOT EDIT CODE ABOVE ########
 
 
@@ -209,9 +210,9 @@ def is_game_complete(board):
     True
     """
 
-    #checks 8 possible winning gameboards
+    # checks 8 possible winning gameboards
 
-    #diagonal 1
+    # diagonal 1
     if (not board[(0, 0)] == " ") and (not board[(1, 1)] == " ") and (not board[(2, 2)] == " "):
         pos1_value = board[(0, 0)]
         pos2_value = board[(1, 1)]
@@ -219,7 +220,7 @@ def is_game_complete(board):
         if check_positions(pos1_value, pos2_value, pos3_value):
             return True
 
-    #diagonal 2
+    # diagonal 2
     elif (not board[(0, 2)] == " ") and (not board[(1, 1)] == " ") and (not board[(2, 0)] == " "):
         pos1_value = board[(0, 2)]
         pos2_value = board[(1, 1)]
@@ -227,7 +228,7 @@ def is_game_complete(board):
         if check_positions(pos1_value, pos2_value, pos3_value):
             return True
 
-    #vertical 1
+    # vertical 1
     elif (not board[(0, 0)] == " ") and (not board[(1, 0)] == " ") and (not board[(2, 0)] == " "):
         pos1_value = board[(0, 0)]
         pos2_value = board[(1, 0)]
@@ -235,7 +236,7 @@ def is_game_complete(board):
         if check_positions(pos1_value, pos2_value, pos3_value):
             return True
 
-    #vertical 2
+    # vertical 2
     elif (not board[(0, 1)] == " ") and (not board[(1, 1)] == " ") and (not board[(2, 1)] == " "):
         pos1_value = board[(0, 1)]
         pos2_value = board[(1, 1)]
@@ -243,7 +244,7 @@ def is_game_complete(board):
         if check_positions(pos1_value, pos2_value, pos3_value):
             return True
 
-    #vertical 3
+    # vertical 3
     elif (not board[(0, 2)] == " ") and (not board[(1, 2)] == " ") and (not board[(2, 2)] == " "):
         pos1_value = board[(0, 2)]
         pos2_value = board[(1, 2)]
@@ -251,7 +252,7 @@ def is_game_complete(board):
         if check_positions(pos1_value, pos2_value, pos3_value):
             return True
 
-    #horizontal 1
+    # horizontal 1
     elif not board[(0, 0)] == " " and not board[(0, 1)] == " " and not board[(0, 2)] == " ":
         pos1_value = board[(0, 0)]
         pos2_value = board[(0, 1)]
@@ -259,7 +260,7 @@ def is_game_complete(board):
         if check_positions(pos1_value, pos2_value, pos3_value):
             return True
 
-    #horizontal 2
+    # horizontal 2
     elif not board[(1, 0)] == " " and not board[(1, 1)] == " " and not board[(1, 2)] == " ":
         pos1_value = board[(1, 0)]
         pos2_value = board[(1, 1)]
@@ -267,7 +268,7 @@ def is_game_complete(board):
         if check_positions(pos1_value, pos2_value, pos3_value):
             return True
 
-    #horizontal 3
+    # horizontal 3
     elif not board[(2, 0)] == " " and not board[(2, 1)] == " " and not board[(2, 2)] == " ":
         pos1_value = board[(2, 0)]
         pos2_value = board[(2, 1)]
@@ -318,19 +319,16 @@ def play_tic_tac_toe(board):
 
 
 def main():
-
     ########## DO NOT EDIT DICTIONARY INITIALIZATION BELOW #########
 
     board = {
-        (0,0): ' ', (0,1): ' ', (0,2): ' ',
-        (1,0): ' ', (1,1): ' ', (1,2): ' ',
-        (2,0): ' ', (2,1): ' ', (2,2): ' '
+        (0, 0): ' ', (0, 1): ' ', (0, 2): ' ',
+        (1, 0): ' ', (1, 1): ' ', (1, 2): ' ',
+        (2, 0): ' ', (2, 1): ' ', (2, 2): ' '
     }
 
-
-
     ########## DO NOT EDIT DICTIONARY INITIALIZATION ABOVE #########
-    
+
     # call play_tic_tac_toe() with board as argument and remove pass below
     play_tic_tac_toe(board)
 
