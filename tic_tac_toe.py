@@ -337,10 +337,11 @@ def is_program_finished():
     """
     while True:
         play_again = input("Play again (Y/N)? ")
+        print()
         if play_again == "Y" or play_again == "y":
-            return True
-        if play_again == "N" or play_again == "n":
             return False
+        if play_again == "N" or play_again == "n":
+            return True
 
 def main():
     ########## DO NOT EDIT DICTIONARY INITIALIZATION BELOW #########
