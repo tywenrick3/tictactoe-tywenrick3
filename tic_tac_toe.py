@@ -342,7 +342,6 @@ def play_tic_tac_toe(board):
             reset_board(board)
             current = 0
 
-        
 
 def is_program_finished():
     """Prompts the user with the message "Play again (Y/N)?". The question is repeated
@@ -359,6 +358,7 @@ def is_program_finished():
             return False
         if play_again == "N" or play_again == "n":
             return True
+
 
 def main():
     ########## DO NOT EDIT DICTIONARY INITIALIZATION BELOW #########
