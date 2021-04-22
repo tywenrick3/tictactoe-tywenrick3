@@ -292,51 +292,56 @@ def play_tic_tac_toe(board):
         print("Let's Play Tic-tac-toe!")
         print()
         current += 1
-        
-    while current < MAX_ROUNDS:
-        if current % 2 == 0:
-            if not is_game_complete(board):
-                display_board(board)
-                player_mark = 'X'
-                position = get_position_choice(board, player_mark)
-                update_board(board, player_mark, position)
+
+    play = True
+
+    while play:
+        while current < MAX_ROUNDS:
+            if current % 2 == 0:
+                if not is_game_complete(board):
+                    display_board(board)
+                    player_mark = 'X'
+                    position = get_position_choice(board, player_mark)
+                    update_board(board, player_mark, position)
+                else:
+                    display_board(board)
+                    print("O wins!")
+                    print()
+                    break
             else:
-                display_board(board)
-                print("O wins!")
-                print()
-                break
+                if not is_game_complete(board):
+                    display_board(board)
+                    player_mark = 'O'
+                    position = get_position_choice(board, player_mark)
+                    update_board(board, player_mark, position)
+                else:
+                    display_board(board)
+                    print("X wins!")
+                    print()
+                    break
+
+            current += 1
+
+        # X wins Final round
+        if is_game_complete(board) and current % 2 != 0:
+            display_board(board)
+            print("X wins!")
+            print()
+
+        # draw
+        if not is_game_complete(board):
+            display_board(board)
+            print("It's a draw!")
+            print()
+
+        if is_program_finished():
+            play = False
+            print("Goodbye.")
+            print()
         else:
-            if not is_game_complete(board):
-                display_board(board)
-                player_mark = 'O'
-                position = get_position_choice(board, player_mark)
-                update_board(board, player_mark, position)
-            else:
-                display_board(board)
-                print("X wins!")
-                print()
-                break
+            reset_board(board)
+            current = 0
 
-        current += 1
-
-    # X wins Final round
-    if is_game_complete(board) and current % 2 != 0:
-        display_board(board)
-        print("X wins!")
-        print()
-
-    # draw
-    if not is_game_complete(board):
-        display_board(board)
-        print("It's a draw!")
-        print()
-    
-    if is_program_finished():
-        print("Goodbye.")
-        print()
-    else:
-        reset_board(board)
-        play_tic_tac_toe(board)
         
 
 def is_program_finished():
