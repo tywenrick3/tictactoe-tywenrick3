@@ -287,9 +287,9 @@ def play_tic_tac_toe(board):
     :param board: a dict of (row, col) tuple keys and string values
     :return: None
     """
-    round = 0
-    while round < MAX_ROUNDS:
-        if round % 2 == 0:
+    current = 0
+    while current < MAX_ROUNDS:
+        if current % 2 == 0:
             if not is_game_complete(board):
                 display_board(board)
                 player_mark = 'X'
@@ -312,14 +312,14 @@ def play_tic_tac_toe(board):
                 print()
                 break
 
-        round += 1
+        current += 1
 
-    if is_game_complete(board) and round % 2 == 0:
+    if is_game_complete(board) and current % 2 == 0:
         display_board(board)
         print("X wins!")
         print()
 
-    else:
+    if not is_game_complete(board):
         display_board(board)
         print("It's a draw!")
         print()
