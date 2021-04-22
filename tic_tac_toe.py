@@ -314,7 +314,7 @@ def play_tic_tac_toe(board):
 
         round += 1
 
-    if not is_game_complete(board) and round == MAX_ROUNDS:
+    if not is_game_complete(board):
         display_board(board)
         print("It's a draw!")
         print()
