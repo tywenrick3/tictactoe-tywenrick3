@@ -314,7 +314,7 @@ def play_tic_tac_toe(board):
 
         current += 1
 
-    if is_game_complete(board) and current % 2 == 0:
+    if is_game_complete(board) and current % 2 != 0:
         display_board(board)
         print("X wins!")
         print()
