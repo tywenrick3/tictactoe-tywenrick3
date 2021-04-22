@@ -296,6 +296,7 @@ def play_tic_tac_toe(board):
                 position = get_position_choice(board, player_mark)
                 update_board(board, player_mark, position)
             else:
+                display_board(board)
                 print("O wins!")
                 print()
                 break
@@ -306,6 +307,7 @@ def play_tic_tac_toe(board):
                 position = get_position_choice(board, player_mark)
                 update_board(board, player_mark, position)
             else:
+                display_board(board)
                 print("X wins!")
                 print()
                 break
