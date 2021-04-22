@@ -287,7 +287,12 @@ def play_tic_tac_toe(board):
     :param board: a dict of (row, col) tuple keys and string values
     :return: None
     """
-    current = 0
+    current = -1
+    if current == -1:
+        print("Let's Play Tic-tac-toe!")
+        print()
+        current += 1
+        
     while current < MAX_ROUNDS:
         if current % 2 == 0:
             if not is_game_complete(board):
@@ -325,7 +330,14 @@ def play_tic_tac_toe(board):
         display_board(board)
         print("It's a draw!")
         print()
-
+    
+    if is_program_finished():
+        print("Goodbye.")
+        print()
+    else:
+        reset_board(board)
+        play_tic_tac_toe(board)
+        
 
 def is_program_finished():
     """Prompts the user with the message "Play again (Y/N)?". The question is repeated
