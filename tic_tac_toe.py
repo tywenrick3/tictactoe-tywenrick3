@@ -279,7 +279,7 @@ def is_game_complete(board):
     return False
 
 
-def play_tic_tac_toe(board):
+def play_tic_tac_toe(board, current):
     """Controls Tic-tac-toe games. This includes prompting player's for
     position choices, checking for winning game configurations, and outputting
     the outcome of a game.
@@ -287,7 +287,7 @@ def play_tic_tac_toe(board):
     :param board: a dict of (row, col) tuple keys and string values
     :return: None
     """
-    current = -1
+
     if current == -1:
         print("Let's Play Tic-tac-toe!")
         print()
@@ -336,7 +336,7 @@ def play_tic_tac_toe(board):
         print()
     else:
         reset_board(board)
-        play_tic_tac_toe(board)
+        play_tic_tac_toe(board, 0)
         
 
 def is_program_finished():
@@ -367,7 +367,7 @@ def main():
     ########## DO NOT EDIT DICTIONARY INITIALIZATION ABOVE #########
 
     # call play_tic_tac_toe() with board as argument and remove pass below
-    play_tic_tac_toe(board)
+    play_tic_tac_toe(board, -1)
 
 
 if __name__ == '__main__':
