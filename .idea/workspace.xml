@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fe89fe9-39fa-40ab-866c-2bbc950d3ad2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/tic_tac_toe.py" beforeDir="false" afterPath="$PROJECT_DIR$/tic_tac_toe.py" afterDir="false" />
-    </list>
+    <list default="true" id="9fe89fe9-39fa-40ab-866c-2bbc950d3ad2" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,9 +77,9 @@
     <MESSAGE value="is_game_complete updated" />
     <MESSAGE value="play_tic_tac_toe added" />
     <MESSAGE value="is_game_complete() updated" />
-    <MESSAGE value="play_tic_tac_toe() updated" />
     <MESSAGE value="is_program_finished() added" />
     <MESSAGE value="is_program_finished() updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="is_program_finished() updated" />
+    <MESSAGE value="play_tic_tac_toe() updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="play_tic_tac_toe() updated" />
   </component>
 </project>
