@@ -213,28 +213,68 @@ def is_game_complete(board):
 
     #diagonal 1
     if (board[(0,0)] == "X" and board[(1,1)] == "X" and board[(2,2)] == "X") or (board[(0,0)] == "O" and board[(1,1)] == "O" and board[(2,2)] == "O"):
-        return True
+        pos1_value = board[(0, 0)]
+        pos2_value = board[(1, 1)]
+        pos3_value = board[(2, 2)]
+        if check_positions(pos1_value, pos2_value, pos3_value):
+            return True
+
     #diagonal 2
     elif (board[(0,2)] == "X" and board[(1,1)] == "X" and board[(2,0)] == "X") or (board[(0,2)] == "O" and board[(1,1)] == "O" and board[(2,0)] == "O"):
-        return True
+        pos1_value = board[(0, 2)]
+        pos2_value = board[(1, 1)]
+        pos3_value = board[(2, 0)]
+        if check_positions(pos1_value, pos2_value, pos3_value):
+            return True
+
     #vertical 1
     elif (board[(0,0)] == "X" and board[(1,0)] == "X" and board[(2,0)] == "X") or (board[(0,0)] == "O" and board[(1,0)] == "O" and board[(2,0)] == "O"):
-        return True
+        pos1_value = board[(0, 0)]
+        pos2_value = board[(1, 0)]
+        pos3_value = board[(2, 0)]
+        if check_positions(pos1_value, pos2_value, pos3_value):
+            return True
+
     #vertical 2
     elif (board[(0,1)] == "X" and board[(1,1)] == "X" and board[(2,1)] == "X") or (board[(0,1)] == "O" and board[(1,1)] == "O" and board[(2,1)] == "O"):
-        return True
+        pos1_value = board[(0, 1)]
+        pos2_value = board[(1, 1)]
+        pos3_value = board[(2, 2)]
+        if check_positions(pos1_value, pos2_value, pos3_value):
+            return True
+
     #vertical 3
     elif (board[(0,2)] == "X" and board[(1,2)] == "X" and board[(2,2)] == "X") or (board[(0,2)] == "O" and board[(1,2)] == "O" and board[(2,2)] == "O"):
-        return True
+        pos1_value = board[(0, 2)]
+        pos2_value = board[(1, 2)]
+        pos3_value = board[(2, 2)]
+        if check_positions(pos1_value, pos2_value, pos3_value):
+            return True
+
     #horizontal 1
     elif (board[(0,0)] == "X" and board[(0,1)] == "X" and board[(0,2)] == "X") or (board[(0,0)] == "O" and board[(0,1)] == "O" and board[(0,2)] == "O"):
-        return True
+        pos1_value = board[(0, 0)]
+        pos2_value = board[(0, 1)]
+        pos3_value = board[(0, 2)]
+        if check_positions(pos1_value, pos2_value, pos3_value):
+            return True
+
     #horizontal 2
     elif (board[(1,0)] == "X" and board[(1,1)] == "X" and board[(1,2)] == "X") or (board[(1,0)] == "O" and board[(1,1)] == "O" and board[(1,2)] == "O"):
-        return True
+        pos1_value = board[(1, 0)]
+        pos2_value = board[(1, 1)]
+        pos3_value = board[(1, 2)]
+        if check_positions(pos1_value, pos2_value, pos3_value):
+            return True
+
     #horizontal 3
     elif (board[(2,0)] == "X" and board[(2,1)] == "X" and board[(2,2)] == "X") or (board[(2,0)] == "O" and board[(2,1)] == "O" and board[(2,2)] == "O"):
-        return True
+        pos1_value = board[(2, 0)]
+        pos2_value = board[(2, 1)]
+        pos3_value = board[(2, 2)]
+        if check_positions(pos1_value, pos2_value, pos3_value):
+            return True
+
     else:
         return False
 
@@ -274,6 +314,7 @@ def play_tic_tac_toe(board):
 
     if not is_game_complete(board):
         print("It's a draw!")
+        print()
 
 
 def main():
