@@ -314,16 +314,33 @@ def play_tic_tac_toe(board):
 
         current += 1
 
+    # X wins Final round
     if is_game_complete(board) and current % 2 != 0:
         display_board(board)
         print("X wins!")
         print()
 
+    # draw
     if not is_game_complete(board):
         display_board(board)
         print("It's a draw!")
         print()
 
+
+def is_program_finished():
+    """Prompts the user with the message "Play again (Y/N)?". The question is repeated
+    until the user enters a valid response (one of Y/y/N/n). The function
+    returns False if the user enters 'Y' or 'y' and returns True if the user
+    enters 'N' or 'n'.
+
+    :return response: boolean representing program completion status
+    """
+    while True:
+        play_again = input("Play again (Y/N)? ")
+        if play_again == "Y" or play_again == "y":
+            return True
+        if play_again == "N" or play_again == "n":
+            return False
 
 def main():
     ########## DO NOT EDIT DICTIONARY INITIALIZATION BELOW #########
